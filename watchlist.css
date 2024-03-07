@@ -1,0 +1,223 @@
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 550px;
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    background: #121212;
+}
+
+
+/* *{
+    border: .25px solid red;
+} */
+
+#header-container{
+    display:flex;
+    background: url("images/watchlist.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    height: 300px;
+}
+
+#header{
+    font-size: 2.625rem;
+    font-weight: 800;
+    line-height: 50%;
+    margin-left: 1em;
+}
+
+#search-for-movies-btn{
+    background: none;
+    cursor:pointer;
+    border:none;
+    font-family:inherit;
+    color: inherit;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 150%;
+    text-decoration: none;
+    margin-right: 3em;
+}
+
+#search-for-movies-btn:hover{
+    font-size:.99em;
+}
+
+/* Movie */
+
+#watchlist-container{
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+
+#movie-container{
+    display: flex;
+    margin: 0 2.75em;
+    border-bottom: 1.5px solid #2C2C2C;
+}
+
+#movie-poster{
+    margin: 1em 0;
+    max-height: 150px;
+}
+
+#text-container{
+    margin: 0 0 0 1.65em;
+}
+
+/* Title, Rating */
+
+#movie-header-container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 0 -.6875em 0;
+}
+
+#movie-title{
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+#movie-rating{
+    margin-left: 1em; 
+}
+
+#movie-rating, #movie-subheading-container{
+    font-size: .75rem;
+    line-height: 165%;
+}
+
+/* Year */
+
+#movie-year, #movie-actors{
+    font-size: .75rem;
+    margin:0;
+}
+
+#movie-year{
+    margin-top: .5em;
+}
+
+/* Runetime, Genre, Watchlist Button */
+
+#movie-subheading-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+    margin: 0 3.35em 0 0;
+}
+
+.movie-remove{
+    display: flex;
+    align-items: center;
+    background: none;
+    cursor:pointer;
+    border:none;
+    font-family:inherit;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 160%;
+}
+
+#remove-icon{
+    background:#FFF;
+    color: #121212;
+    font-weight: 700;
+    height: 16px;     
+    width: 16px;      
+    flex-shrink: 0;
+    border-radius: 50%; 
+    display: flex;    
+    align-items: center;
+    justify-content: center;  
+    margin-right: .25em;
+}
+
+.movie-remove:hover{
+    font-size: .97em;
+}
+
+/*  */
+
+#movie-description{
+    color: #A5A5A5;
+    font-size: .875rem;
+    line-height: 140%;
+    margin-bottom: 2.5em;
+}
+
+/*  */
+
+#filler-text-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 4em auto;
+}
+
+#filler-text, #unable-to-find{
+    color: #2E2E2F;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+#redirect-to-index{
+    display: flex;
+    align-items: center;
+    background: none;
+    cursor:pointer;
+    border:none;
+    font-family:inherit;
+    color: #fff;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 160%;
+    text-decoration: none;
+}
+
+#redirect-to-index:hover{
+    font-size: .99em;
+}
+
+#unable-to-find{
+    display: block;
+}
+
+#popup-container {
+    display: none; /* Initially hide the popup */
+    position: fixed;
+    font-size: .75rem;
+    top: 90%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    text-align: center;
+  }
+  
+  /* Animation to fade in and out */
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+  }
+  
+  .popup-show {
+    animation: fadeInOut 3s; /* Show the popup for 3 seconds */
+  }
